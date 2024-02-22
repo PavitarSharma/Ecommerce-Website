@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firstlink Exim</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f3f3f320;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .container {
+        max-width: 600px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .logo {
+        margin-bottom: 1rem;
+        padding-inline: 1rem;
+      }
+
+      .card {
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid #99999930;
+        border-radius: 4px;
+        padding: 20px;
+        font-size: 16px;
+        border-bottom: 0;
+      }
+
+      .title {
+        line-height: 2rem;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      p {
+        font-size: 14px;
+        color: #666;
+      }
+
+      .name {
+        margin-block: 1rem;
+      }
+
+      .description {
+        margin-block: 1rem;
+      }
+
+      button {
+        border: none;
+        outline: none;
+      }
+
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 36px;
+        border-radius: 4px;
+        border: none;
+        background-color: #FF5252;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .footer {
+        width: 100%;
+        height: 50px;
+        background-color: #ededef;
+        text-align: center;
+        padding-bottom: 0 !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- <table>
+        <tr>
+          <td>
+            <h1 class="logo">Logo</h1>
+          </td>
+        </tr>
+      </table> -->
+
+      <table class="card">
+        <tr>
+          <td>
+            <h2 class="title">Welcome to Firstlink Exim</h2>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p class="name">Hello <%= name %>,</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p>Thank you for registering and being a memeber with us.</p>
+          </td>
+        </tr>
+
+        <tr >
+            <td>
+                <p style="margin-block: 1rem;">You are just a step away from accessing your Firstlink Exim account</p>
+              </td>
+        </tr>
+
+        <tr >
+            <td>
+                <p >We are sharing a verification code to access your account. The code is valid for 10 minutes and usable only once.
+                </p>
+              </td>
+        </tr>
+
+        <tr >
+            <td>
+                <p style="margin-block: 1rem;">
+                    Once you have verified the code, you'll be prompted to home page immediately. This is to ensure that only you have access to your account.
+                </p>
+              </td>
+        </tr>
+
+        <tr style="display: flex; align-items: center; justify-content: center; margin-top: 1rem; margin-bottom: 1.5rem;">
+          <td>
+            <button class="btn">
+                <%= otp %>
+            </button>   
+          </td>
+        </tr>
+
+        <tr>
+            <td style="font-size: 14px; color: #222;">
+            <sapn>Regards,</span>
+            
+        </td>
+
+        <tr>
+            <td >
+                <span style="font-size: 14px; color: #222; margin-top: 12px;">The Firstlink Exim Team</span>
+            </td>
+        </tr>
+           
+        </tr>
+
+       
+      </table>
+
+
+    </div>
+  </body>
+</html>
