@@ -1,425 +1,666 @@
-[2024-02-21T06:56:37.303Z] [31merror[39m: unhandledRejection: Operation `customers.findOne()` buffering timed out after 10000ms
-MongooseError: Operation `customers.findOne()` buffering timed out after 10000ms
-    at Timeout.<anonymous> (/Users/pavitarsharma/Desktop/ajay/server/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:186:23)
-    at listOnTimeout (node:internal/timers:573:17)
-    at processTimers (node:internal/timers:514:7)
-[2024-02-21T07:02:40.759Z] [31merror[39m: unhandledRejection: Operation `customers.findOne()` buffering timed out after 10000ms
-MongooseError: Operation `customers.findOne()` buffering timed out after 10000ms
-    at Timeout.<anonymous> (/Users/pavitarsharma/Desktop/ajay/server/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:186:23)
-    at listOnTimeout (node:internal/timers:573:17)
-    at processTimers (node:internal/timers:514:7)
-[2024-02-21T07:03:50.447Z] [31merror[39m: unhandledRejection: Operation `customers.findOne()` buffering timed out after 10000ms
-MongooseError: Operation `customers.findOne()` buffering timed out after 10000ms
-    at Timeout.<anonymous> (/Users/pavitarsharma/Desktop/ajay/server/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:186:23)
-    at listOnTimeout (node:internal/timers:573:17)
-    at processTimers (node:internal/timers:514:7)
-[2024-02-21T07:05:33.032Z] [31merror[39m: unhandledRejection: Operation `customers.findOne()` buffering timed out after 10000ms
-MongooseError: Operation `customers.findOne()` buffering timed out after 10000ms
-    at Timeout.<anonymous> (/Users/pavitarsharma/Desktop/ajay/server/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:186:23)
-    at listOnTimeout (node:internal/timers:573:17)
-    at processTimers (node:internal/timers:514:7)
-[2024-02-21T08:14:04.043Z] [31merror[39m: unhandledRejection: /Users/pavitarsharma/Desktop/ajay/server/src/views/activation-account-mail.ejs:151
-    149|           <td>
-    150|             <button class="btn">
- >> 151|                 <%= otp %>
-    152|             </button>   
-    153|           </td>
-    154|         </tr>
-
-otp is not defined
-ReferenceError: /Users/pavitarsharma/Desktop/ajay/server/src/views/activation-account-mail.ejs:151
-    149|           <td>
-    150|             <button class="btn">
- >> 151|                 <%= otp %>
-    152|             </button>   
-    153|           </td>
-    154|         </tr>
-
-otp is not defined
-    at eval ("/Users/pavitarsharma/Desktop/ajay/server/src/views/activation-account-mail.ejs":15:26)
-    at activation-account-mail (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ejs@3.1.9/node_modules/ejs/lib/ejs.js:703:17)
-    at /Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ejs@3.1.9/node_modules/ejs/lib/ejs.js:260:40
-    at new Promise (<anonymous>)
-    at tryHandleCache (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ejs@3.1.9/node_modules/ejs/lib/ejs.js:258:14)
-    at Object.exports.renderFile (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ejs@3.1.9/node_modules/ejs/lib/ejs.js:491:10)
-    at /Users/pavitarsharma/Desktop/ajay/server/src/utils/nodemailer.ts:23:34
-    at Generator.next (<anonymous>)
-    at /Users/pavitarsharma/Desktop/ajay/server/src/utils/nodemailer.ts:8:71
-    at new Promise (<anonymous>)
-[2024-02-21T08:19:45.993Z] [31merror[39m: unhandledRejection: /Users/pavitarsharma/Desktop/ajay/server/src/views/activation-account-mail.ejs:151
-    149|           <td>
-    150|             <button class="btn">
- >> 151|                 <%= otp %>
-    152|             </button>   
-    153|           </td>
-    154|         </tr>
-
-otp is not defined
-ReferenceError: /Users/pavitarsharma/Desktop/ajay/server/src/views/activation-account-mail.ejs:151
-    149|           <td>
-    150|             <button class="btn">
- >> 151|                 <%= otp %>
-    152|             </button>   
-    153|           </td>
-    154|         </tr>
-
-otp is not defined
-    at eval ("/Users/pavitarsharma/Desktop/ajay/server/src/views/activation-account-mail.ejs":15:26)
-    at activation-account-mail (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ejs@3.1.9/node_modules/ejs/lib/ejs.js:703:17)
-    at /Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ejs@3.1.9/node_modules/ejs/lib/ejs.js:260:40
-    at new Promise (<anonymous>)
-    at tryHandleCache (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ejs@3.1.9/node_modules/ejs/lib/ejs.js:258:14)
-    at Object.exports.renderFile (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ejs@3.1.9/node_modules/ejs/lib/ejs.js:491:10)
-    at /Users/pavitarsharma/Desktop/ajay/server/src/utils/nodemailer.ts:23:34
-    at Generator.next (<anonymous>)
-    at /Users/pavitarsharma/Desktop/ajay/server/src/utils/nodemailer.ts:8:71
-    at new Promise (<anonymous>)
-[2024-02-21T08:27:52.629Z] [31merror[39m: uncaughtException: ⨯ Unable to compile TypeScript:
-[96msrc/services/customer.service.ts[0m:[93m106[0m:[93m22[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ email: string; subject: string; template: string; dynamicData: { name: string; }; }' is not assignable to parameter of type 'EmailData'.
-  Type '{ email: string; subject: string; template: string; dynamicData: { name: string; }; }' is missing the following properties from type 'EmailData': data, html
-
-[7m106[0m       await sendMail(emailData);
-[7m   [0m [91m                     ~~~~~~~~~[0m
-
-TSError: ⨯ Unable to compile TypeScript:
-[96msrc/services/customer.service.ts[0m:[93m106[0m:[93m22[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ email: string; subject: string; template: string; dynamicData: { name: string; }; }' is not assignable to parameter of type 'EmailData'.
-  Type '{ email: string; subject: string; template: string; dynamicData: { name: string; }; }' is missing the following properties from type 'EmailData': data, html
-
-[7m106[0m       await sendMail(emailData);
-[7m   [0m [91m                     ~~~~~~~~~[0m
-
-    at createTSError (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:859:12)
-    at reportTSError (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:863:19)
-    at getOutput (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:1077:36)
-    at Object.compile (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:1433:41)
-    at Module.m._compile (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:1617:30)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1437:10)
-    at Object.require.extensions.<computed> [as .ts] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:1621:12)
-    at Module.load (node:internal/modules/cjs/loader:1212:32)
-    at Function.Module._load (node:internal/modules/cjs/loader:1028:12)
-    at Module.require (node:internal/modules/cjs/loader:1237:19)
-[2024-02-21T08:28:20.687Z] [31merror[39m: uncaughtException: ⨯ Unable to compile TypeScript:
-[96msrc/services/customer.service.ts[0m:[93m106[0m:[93m22[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ email: string; subject: string; template: string; dynamicData: { name: string; }; }' is not assignable to parameter of type 'EmailData'.
-  Type '{ email: string; subject: string; template: string; dynamicData: { name: string; }; }' is missing the following properties from type 'EmailData': data, html
-
-[7m106[0m       await sendMail(emailData);
-[7m   [0m [91m                     ~~~~~~~~~[0m
-
-TSError: ⨯ Unable to compile TypeScript:
-[96msrc/services/customer.service.ts[0m:[93m106[0m:[93m22[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ email: string; subject: string; template: string; dynamicData: { name: string; }; }' is not assignable to parameter of type 'EmailData'.
-  Type '{ email: string; subject: string; template: string; dynamicData: { name: string; }; }' is missing the following properties from type 'EmailData': data, html
-
-[7m106[0m       await sendMail(emailData);
-[7m   [0m [91m                     ~~~~~~~~~[0m
-
-    at createTSError (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:859:12)
-    at reportTSError (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:863:19)
-    at getOutput (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:1077:36)
-    at Object.compile (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:1433:41)
-    at Module.m._compile (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:1617:30)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1437:10)
-    at Object.require.extensions.<computed> [as .ts] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:1621:12)
-    at Module.load (node:internal/modules/cjs/loader:1212:32)
-    at Function.Module._load (node:internal/modules/cjs/loader:1028:12)
-    at Module.require (node:internal/modules/cjs/loader:1237:19)
-[2024-02-21T08:28:33.131Z] [31merror[39m: uncaughtException: ⨯ Unable to compile TypeScript:
-[96msrc/services/customer.service.ts[0m:[93m106[0m:[93m22[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ email: string; subject: string; template: string; dynamicData: { name: string; }; }' is not assignable to parameter of type 'EmailData'.
-  Type '{ email: string; subject: string; template: string; dynamicData: { name: string; }; }' is missing the following properties from type 'EmailData': data, html
-
-[7m106[0m       await sendMail(emailData);
-[7m   [0m [91m                     ~~~~~~~~~[0m
-
-TSError: ⨯ Unable to compile TypeScript:
-[96msrc/services/customer.service.ts[0m:[93m106[0m:[93m22[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ email: string; subject: string; template: string; dynamicData: { name: string; }; }' is not assignable to parameter of type 'EmailData'.
-  Type '{ email: string; subject: string; template: string; dynamicData: { name: string; }; }' is missing the following properties from type 'EmailData': data, html
-
-[7m106[0m       await sendMail(emailData);
-[7m   [0m [91m                     ~~~~~~~~~[0m
-
-    at createTSError (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:859:12)
-    at reportTSError (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:863:19)
-    at getOutput (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:1077:36)
-    at Object.compile (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:1433:41)
-    at Module.m._compile (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:1617:30)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1437:10)
-    at Object.require.extensions.<computed> [as .ts] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:1621:12)
-    at Module.load (node:internal/modules/cjs/loader:1212:32)
-    at Function.Module._load (node:internal/modules/cjs/loader:1028:12)
-    at Module.require (node:internal/modules/cjs/loader:1237:19)
-[2024-02-21T08:28:46.854Z] [31merror[39m: uncaughtException: ⨯ Unable to compile TypeScript:
-[96msrc/services/customer.service.ts[0m:[93m106[0m:[93m22[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ email: string; subject: string; template: string; dynamicData: { name: string; }; }' is not assignable to parameter of type 'EmailData'.
-  Type '{ email: string; subject: string; template: string; dynamicData: { name: string; }; }' is missing the following properties from type 'EmailData': data, html
-
-[7m106[0m       await sendMail(emailData);
-[7m   [0m [91m                     ~~~~~~~~~[0m
-
-TSError: ⨯ Unable to compile TypeScript:
-[96msrc/services/customer.service.ts[0m:[93m106[0m:[93m22[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ email: string; subject: string; template: string; dynamicData: { name: string; }; }' is not assignable to parameter of type 'EmailData'.
-  Type '{ email: string; subject: string; template: string; dynamicData: { name: string; }; }' is missing the following properties from type 'EmailData': data, html
-
-[7m106[0m       await sendMail(emailData);
-[7m   [0m [91m                     ~~~~~~~~~[0m
-
-    at createTSError (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:859:12)
-    at reportTSError (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:863:19)
-    at getOutput (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:1077:36)
-    at Object.compile (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:1433:41)
-    at Module.m._compile (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:1617:30)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1437:10)
-    at Object.require.extensions.<computed> [as .ts] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:1621:12)
-    at Module.load (node:internal/modules/cjs/loader:1212:32)
-    at Function.Module._load (node:internal/modules/cjs/loader:1028:12)
-    at Module.require (node:internal/modules/cjs/loader:1237:19)
-[2024-02-21T08:31:43.914Z] [31merror[39m: uncaughtException: ⨯ Unable to compile TypeScript:
-[96msrc/services/customer.service.ts[0m:[93m106[0m:[93m22[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ email: string; subject: string; template: string; dynamicData: { name: string; }; }' is not assignable to parameter of type 'EmailData'.
-  Property 'html' is missing in type '{ email: string; subject: string; template: string; dynamicData: { name: string; }; }' but required in type 'EmailData'.
-
-[7m106[0m       await sendMail(emailData);
-[7m   [0m [91m                     ~~~~~~~~~[0m
-
-  [96msrc/utils/nodemailer.ts[0m:[93m16[0m:[93m3[0m
-    [7m16[0m   html: string
-    [7m  [0m [96m  ~~~~[0m
-    'html' is declared here.
-
-TSError: ⨯ Unable to compile TypeScript:
-[96msrc/services/customer.service.ts[0m:[93m106[0m:[93m22[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ email: string; subject: string; template: string; dynamicData: { name: string; }; }' is not assignable to parameter of type 'EmailData'.
-  Property 'html' is missing in type '{ email: string; subject: string; template: string; dynamicData: { name: string; }; }' but required in type 'EmailData'.
-
-[7m106[0m       await sendMail(emailData);
-[7m   [0m [91m                     ~~~~~~~~~[0m
-
-  [96msrc/utils/nodemailer.ts[0m:[93m16[0m:[93m3[0m
-    [7m16[0m   html: string
-    [7m  [0m [96m  ~~~~[0m
-    'html' is declared here.
-
-    at createTSError (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:859:12)
-    at reportTSError (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:863:19)
-    at getOutput (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:1077:36)
-    at Object.compile (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:1433:41)
-    at Module.m._compile (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:1617:30)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1437:10)
-    at Object.require.extensions.<computed> [as .ts] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:1621:12)
-    at Module.load (node:internal/modules/cjs/loader:1212:32)
-    at Function.Module._load (node:internal/modules/cjs/loader:1028:12)
-    at Module.require (node:internal/modules/cjs/loader:1237:19)
-[2024-02-21T08:34:03.265Z] [31merror[39m: uncaughtException: ⨯ Unable to compile TypeScript:
-[96msrc/services/customer.service.ts[0m:[93m106[0m:[93m22[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ email: string; subject: string; template: string; dynamicData: { name: string; }; }' is not assignable to parameter of type 'EmailData'.
-  Property 'html' is missing in type '{ email: string; subject: string; template: string; dynamicData: { name: string; }; }' but required in type 'EmailData'.
-
-[7m106[0m       await sendMail(emailData);
-[7m   [0m [91m                     ~~~~~~~~~[0m
-
-  [96msrc/utils/nodemailer.ts[0m:[93m16[0m:[93m3[0m
-    [7m16[0m   html: string
-    [7m  [0m [96m  ~~~~[0m
-    'html' is declared here.
-
-TSError: ⨯ Unable to compile TypeScript:
-[96msrc/services/customer.service.ts[0m:[93m106[0m:[93m22[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ email: string; subject: string; template: string; dynamicData: { name: string; }; }' is not assignable to parameter of type 'EmailData'.
-  Property 'html' is missing in type '{ email: string; subject: string; template: string; dynamicData: { name: string; }; }' but required in type 'EmailData'.
-
-[7m106[0m       await sendMail(emailData);
-[7m   [0m [91m                     ~~~~~~~~~[0m
-
-  [96msrc/utils/nodemailer.ts[0m:[93m16[0m:[93m3[0m
-    [7m16[0m   html: string
-    [7m  [0m [96m  ~~~~[0m
-    'html' is declared here.
-
-    at createTSError (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:859:12)
-    at reportTSError (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:863:19)
-    at getOutput (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:1077:36)
-    at Object.compile (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:1433:41)
-    at Module.m._compile (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:1617:30)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1437:10)
-    at Object.require.extensions.<computed> [as .ts] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:1621:12)
-    at Module.load (node:internal/modules/cjs/loader:1212:32)
-    at Function.Module._load (node:internal/modules/cjs/loader:1028:12)
-    at Module.require (node:internal/modules/cjs/loader:1237:19)
-[2024-02-22T05:16:52.940Z] [31merror[39m: unhandledRejection: Cannot set headers after they are sent to the client
-Error: Cannot set headers after they are sent to the client
-    at ServerResponse.setHeader (node:_http_outgoing:703:11)
-    at ServerResponse.header (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/express@4.18.2/node_modules/express/lib/response.js:794:10)
-    at ServerResponse.send (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/express@4.18.2/node_modules/express/lib/response.js:174:12)
-    at ServerResponse.json (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/express@4.18.2/node_modules/express/lib/response.js:278:15)
-    at /Users/pavitarsharma/Desktop/ajay/server/src/controllers/customer.controller.ts:87:19
-    at Generator.next (<anonymous>)
-    at /Users/pavitarsharma/Desktop/ajay/server/src/controllers/customer.controller.ts:8:71
-    at new Promise (<anonymous>)
-    at __awaiter (/Users/pavitarsharma/Desktop/ajay/server/src/controllers/customer.controller.ts:4:12)
-    at verifyEmail (/Users/pavitarsharma/Desktop/ajay/server/src/controllers/customer.controller.ts:64:16)
-[2024-02-22T05:17:15.189Z] [31merror[39m: unhandledRejection: Cannot set headers after they are sent to the client
-Error: Cannot set headers after they are sent to the client
-    at ServerResponse.setHeader (node:_http_outgoing:703:11)
-    at ServerResponse.header (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/express@4.18.2/node_modules/express/lib/response.js:794:10)
-    at ServerResponse.send (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/express@4.18.2/node_modules/express/lib/response.js:174:12)
-    at ServerResponse.json (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/express@4.18.2/node_modules/express/lib/response.js:278:15)
-    at /Users/pavitarsharma/Desktop/ajay/server/src/controllers/customer.controller.ts:89:19
-    at Generator.next (<anonymous>)
-    at /Users/pavitarsharma/Desktop/ajay/server/src/controllers/customer.controller.ts:8:71
-    at new Promise (<anonymous>)
-    at __awaiter (/Users/pavitarsharma/Desktop/ajay/server/src/controllers/customer.controller.ts:4:12)
-    at verifyEmail (/Users/pavitarsharma/Desktop/ajay/server/src/controllers/customer.controller.ts:64:16)
-[2024-02-22T05:17:58.208Z] [31merror[39m: unhandledRejection: Cannot set headers after they are sent to the client
-Error: Cannot set headers after they are sent to the client
-    at ServerResponse.setHeader (node:_http_outgoing:703:11)
-    at ServerResponse.header (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/express@4.18.2/node_modules/express/lib/response.js:794:10)
-    at ServerResponse.send (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/express@4.18.2/node_modules/express/lib/response.js:174:12)
-    at ServerResponse.json (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/express@4.18.2/node_modules/express/lib/response.js:278:15)
-    at /Users/pavitarsharma/Desktop/ajay/server/src/controllers/customer.controller.ts:89:19
-    at Generator.next (<anonymous>)
-    at /Users/pavitarsharma/Desktop/ajay/server/src/controllers/customer.controller.ts:8:71
-    at new Promise (<anonymous>)
-    at __awaiter (/Users/pavitarsharma/Desktop/ajay/server/src/controllers/customer.controller.ts:4:12)
-    at verifyEmail (/Users/pavitarsharma/Desktop/ajay/server/src/controllers/customer.controller.ts:64:16)
-[2024-02-22T06:29:28.288Z] [31merror[39m: uncaughtException: ⨯ Unable to compile TypeScript:
-[96msrc/services/otp.service.ts[0m:[93m11[0m:[93m45[0m - [91merror[0m[90m TS7006: [0mParameter 'otpExpiration' implicitly has an 'any' type.
-
-[7m11[0m   async saveOtp(email: string, otp: number, otpExpiration) {
-[7m  [0m [91m                                            ~~~~~~~~~~~~~[0m
-
-TSError: ⨯ Unable to compile TypeScript:
-[96msrc/services/otp.service.ts[0m:[93m11[0m:[93m45[0m - [91merror[0m[90m TS7006: [0mParameter 'otpExpiration' implicitly has an 'any' type.
-
-[7m11[0m   async saveOtp(email: string, otp: number, otpExpiration) {
-[7m  [0m [91m                                            ~~~~~~~~~~~~~[0m
-
-    at createTSError (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:859:12)
-    at reportTSError (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:863:19)
-    at getOutput (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:1077:36)
-    at Object.compile (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:1433:41)
-    at Module.m._compile (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:1617:30)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1437:10)
-    at Object.require.extensions.<computed> [as .ts] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/ts-node@10.9.2_@types+node@20.11.19_typescript@5.3.3/node_modules/ts-node/src/index.ts:1621:12)
-    at Module.load (node:internal/modules/cjs/loader:1212:32)
-    at Function.Module._load (node:internal/modules/cjs/loader:1028:12)
-    at Module.require (node:internal/modules/cjs/loader:1237:19)
-[2024-02-22T08:03:31.407Z] [31merror[39m: unhandledRejection: E11000 duplicate key error collection: fistlinks.customers index: phone_1 dup key: { phone: null }
-MongoServerError: E11000 duplicate key error collection: fistlinks.customers index: phone_1 dup key: { phone: null }
-    at InsertOneOperation.execute (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/mongodb@6.3.0/node_modules/mongodb/src/operations/insert.ts:79:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async executeOperationAsync (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/mongodb@6.3.0/node_modules/mongodb/src/operations/execute_operation.ts:190:12)
-[2024-02-22T08:08:27.705Z] [31merror[39m: unhandledRejection: E11000 duplicate key error collection: fistlinks.customers index: phone_1 dup key: { phone: null }
-MongoServerError: E11000 duplicate key error collection: fistlinks.customers index: phone_1 dup key: { phone: null }
-    at InsertOneOperation.execute (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/mongodb@6.3.0/node_modules/mongodb/src/operations/insert.ts:79:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async executeOperationAsync (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/mongodb@6.3.0/node_modules/mongodb/src/operations/execute_operation.ts:190:12)
-[2024-02-22T08:09:21.217Z] [31merror[39m: unhandledRejection: E11000 duplicate key error collection: fistlinks.customers index: phone_1 dup key: { phone: null }
-MongoServerError: E11000 duplicate key error collection: fistlinks.customers index: phone_1 dup key: { phone: null }
-    at InsertOneOperation.execute (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/mongodb@6.3.0/node_modules/mongodb/src/operations/insert.ts:79:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async executeOperationAsync (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/mongodb@6.3.0/node_modules/mongodb/src/operations/execute_operation.ts:190:12)
-[2024-02-22T08:10:10.226Z] [31merror[39m: unhandledRejection: E11000 duplicate key error collection: fistlinks.customers index: phone_1 dup key: { phone: null }
-MongoServerError: E11000 duplicate key error collection: fistlinks.customers index: phone_1 dup key: { phone: null }
-    at InsertOneOperation.execute (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/mongodb@6.3.0/node_modules/mongodb/src/operations/insert.ts:79:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async executeOperationAsync (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/mongodb@6.3.0/node_modules/mongodb/src/operations/execute_operation.ts:190:12)
-[2024-02-22T08:13:20.386Z] [31merror[39m: unhandledRejection: E11000 duplicate key error collection: fistlinks.customers index: phone_1 dup key: { phone: null }
-MongoServerError: E11000 duplicate key error collection: fistlinks.customers index: phone_1 dup key: { phone: null }
-    at InsertOneOperation.execute (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/mongodb@6.3.0/node_modules/mongodb/src/operations/insert.ts:79:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async executeOperationAsync (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/mongodb@6.3.0/node_modules/mongodb/src/operations/execute_operation.ts:190:12)
-[2024-02-22T08:14:49.294Z] [31merror[39m: unhandledRejection: E11000 duplicate key error collection: fistlinks.customers index: phone_1 dup key: { phone: null }
-MongoServerError: E11000 duplicate key error collection: fistlinks.customers index: phone_1 dup key: { phone: null }
-    at InsertOneOperation.execute (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/mongodb@6.3.0/node_modules/mongodb/src/operations/insert.ts:79:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async executeOperationAsync (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/mongodb@6.3.0/node_modules/mongodb/src/operations/execute_operation.ts:190:12)
-[2024-02-22T08:15:48.179Z] [31merror[39m: unhandledRejection: E11000 duplicate key error collection: fistlinks.customers index: phone_1 dup key: { phone: null }
-MongoServerError: E11000 duplicate key error collection: fistlinks.customers index: phone_1 dup key: { phone: null }
-    at InsertOneOperation.execute (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/mongodb@6.3.0/node_modules/mongodb/src/operations/insert.ts:79:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async executeOperationAsync (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/mongodb@6.3.0/node_modules/mongodb/src/operations/execute_operation.ts:190:12)
-[2024-02-22T08:22:08.548Z] [31merror[39m: unhandledRejection: E11000 duplicate key error collection: fistlinks.customers index: phone_1 dup key: { phone: null }
-MongoServerError: E11000 duplicate key error collection: fistlinks.customers index: phone_1 dup key: { phone: null }
-    at InsertOneOperation.execute (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/mongodb@6.3.0/node_modules/mongodb/src/operations/insert.ts:79:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async executeOperationAsync (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/mongodb@6.3.0/node_modules/mongodb/src/operations/execute_operation.ts:190:12)
-[2024-02-22T08:24:15.348Z] [31merror[39m: unhandledRejection: E11000 duplicate key error collection: fistlinks.customers index: phone_1 dup key: { phone: null }
-MongoServerError: E11000 duplicate key error collection: fistlinks.customers index: phone_1 dup key: { phone: null }
-    at InsertOneOperation.execute (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/mongodb@6.3.0/node_modules/mongodb/src/operations/insert.ts:79:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async executeOperationAsync (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/mongodb@6.3.0/node_modules/mongodb/src/operations/execute_operation.ts:190:12)
-[2024-02-22T08:24:28.713Z] [31merror[39m: unhandledRejection: E11000 duplicate key error collection: fistlinks.customers index: phone_1 dup key: { phone: null }
-MongoServerError: E11000 duplicate key error collection: fistlinks.customers index: phone_1 dup key: { phone: null }
-    at InsertOneOperation.execute (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/mongodb@6.3.0/node_modules/mongodb/src/operations/insert.ts:79:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async executeOperationAsync (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/mongodb@6.3.0/node_modules/mongodb/src/operations/execute_operation.ts:190:12)
-[2024-02-22T08:58:54.056Z] [31merror[39m: unhandledRejection: E11000 duplicate key error collection: fistlinks.customers index: phone_1 dup key: { phone: null }
-MongoServerError: E11000 duplicate key error collection: fistlinks.customers index: phone_1 dup key: { phone: null }
-    at InsertOneOperation.execute (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/mongodb@6.3.0/node_modules/mongodb/src/operations/insert.ts:79:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async executeOperationAsync (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/mongodb@6.3.0/node_modules/mongodb/src/operations/execute_operation.ts:190:12)
-[2024-02-22T09:00:33.606Z] [31merror[39m: unhandledRejection: E11000 duplicate key error collection: fistlinks.customers index: phone_1 dup key: { phone: null }
-MongoServerError: E11000 duplicate key error collection: fistlinks.customers index: phone_1 dup key: { phone: null }
-    at InsertOneOperation.execute (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/mongodb@6.3.0/node_modules/mongodb/src/operations/insert.ts:79:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async executeOperationAsync (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/mongodb@6.3.0/node_modules/mongodb/src/operations/execute_operation.ts:190:12)
-[2024-02-22T09:01:56.799Z] [31merror[39m: unhandledRejection: E11000 duplicate key error collection: fistlinks.customers index: phone_1 dup key: { phone: null }
-MongoServerError: E11000 duplicate key error collection: fistlinks.customers index: phone_1 dup key: { phone: null }
-    at InsertOneOperation.execute (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/mongodb@6.3.0/node_modules/mongodb/src/operations/insert.ts:79:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async executeOperationAsync (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/mongodb@6.3.0/node_modules/mongodb/src/operations/execute_operation.ts:190:12)
-[2024-02-22T09:02:31.346Z] [31merror[39m: unhandledRejection: E11000 duplicate key error collection: fistlinks.customers index: phone_1 dup key: { phone: null }
-MongoServerError: E11000 duplicate key error collection: fistlinks.customers index: phone_1 dup key: { phone: null }
-    at InsertOneOperation.execute (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/mongodb@6.3.0/node_modules/mongodb/src/operations/insert.ts:79:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async executeOperationAsync (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/mongodb@6.3.0/node_modules/mongodb/src/operations/execute_operation.ts:190:12)
-[2024-02-22T09:03:03.707Z] [31merror[39m: unhandledRejection: E11000 duplicate key error collection: fistlinks.customers index: phone_1 dup key: { phone: null }
-MongoServerError: E11000 duplicate key error collection: fistlinks.customers index: phone_1 dup key: { phone: null }
-    at InsertOneOperation.execute (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/mongodb@6.3.0/node_modules/mongodb/src/operations/insert.ts:79:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async executeOperationAsync (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/mongodb@6.3.0/node_modules/mongodb/src/operations/execute_operation.ts:190:12)
-[2024-02-22T09:06:36.024Z] [31merror[39m: unhandledRejection: E11000 duplicate key error collection: fistlinks.customers index: phone_1 dup key: { phone: null }
-MongoServerError: E11000 duplicate key error collection: fistlinks.customers index: phone_1 dup key: { phone: null }
-    at InsertOneOperation.execute (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/mongodb@6.3.0/node_modules/mongodb/src/operations/insert.ts:79:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async executeOperationAsync (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/mongodb@6.3.0/node_modules/mongodb/src/operations/execute_operation.ts:190:12)
-[2024-02-22T09:14:57.549Z] [31merror[39m: unhandledRejection: Cannot set headers after they are sent to the client
-Error: Cannot set headers after they are sent to the client
-    at ServerResponse.setHeader (node:_http_outgoing:703:11)
-    at ServerResponse.header (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/express@4.18.2/node_modules/express/lib/response.js:794:10)
-    at ServerResponse.send (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/express@4.18.2/node_modules/express/lib/response.js:174:12)
-    at ServerResponse.json (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/express@4.18.2/node_modules/express/lib/response.js:278:15)
-    at /Users/pavitarsharma/Desktop/ajay/server/src/controllers/customer.controller.ts:120:19
-    at Generator.next (<anonymous>)
-    at fulfilled (/Users/pavitarsharma/Desktop/ajay/server/src/controllers/customer.controller.ts:5:58)
-[2024-02-22T09:18:15.241Z] [31merror[39m: unhandledRejection: Cannot set headers after they are sent to the client
-Error: Cannot set headers after they are sent to the client
-    at ServerResponse.setHeader (node:_http_outgoing:703:11)
-    at ServerResponse.header (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/express@4.18.2/node_modules/express/lib/response.js:794:10)
-    at ServerResponse.send (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/express@4.18.2/node_modules/express/lib/response.js:174:12)
-    at ServerResponse.json (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/express@4.18.2/node_modules/express/lib/response.js:278:15)
-    at /Users/pavitarsharma/Desktop/ajay/server/src/controllers/customer.controller.ts:120:19
-    at Generator.next (<anonymous>)
-    at fulfilled (/Users/pavitarsharma/Desktop/ajay/server/src/controllers/customer.controller.ts:5:58)
-[2024-02-22T09:19:17.254Z] [31merror[39m: unhandledRejection: Cannot set headers after they are sent to the client
-Error: Cannot set headers after they are sent to the client
-    at ServerResponse.setHeader (node:_http_outgoing:703:11)
-    at ServerResponse.header (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/express@4.18.2/node_modules/express/lib/response.js:794:10)
-    at ServerResponse.send (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/express@4.18.2/node_modules/express/lib/response.js:174:12)
-    at ServerResponse.json (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/express@4.18.2/node_modules/express/lib/response.js:278:15)
-    at /Users/pavitarsharma/Desktop/ajay/server/src/controllers/customer.controller.ts:120:19
-    at Generator.next (<anonymous>)
-    at fulfilled (/Users/pavitarsharma/Desktop/ajay/server/src/controllers/customer.controller.ts:5:58)
-[2024-02-22T09:19:44.896Z] [31merror[39m: unhandledRejection: Cannot set headers after they are sent to the client
-Error: Cannot set headers after they are sent to the client
-    at ServerResponse.setHeader (node:_http_outgoing:703:11)
-    at ServerResponse.header (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/express@4.18.2/node_modules/express/lib/response.js:794:10)
-    at ServerResponse.send (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/express@4.18.2/node_modules/express/lib/response.js:174:12)
-    at ServerResponse.json (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/express@4.18.2/node_modules/express/lib/response.js:278:15)
-    at /Users/pavitarsharma/Desktop/ajay/server/src/controllers/customer.controller.ts:120:19
-    at Generator.next (<anonymous>)
-    at fulfilled (/Users/pavitarsharma/Desktop/ajay/server/src/controllers/customer.controller.ts:5:58)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-[2024-02-22T09:22:09.090Z] [31merror[39m: unhandledRejection: Cannot set headers after they are sent to the client
-Error: Cannot set headers after they are sent to the client
-    at ServerResponse.setHeader (node:_http_outgoing:703:11)
-    at ServerResponse.header (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/express@4.18.2/node_modules/express/lib/response.js:794:10)
-    at ServerResponse.send (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/express@4.18.2/node_modules/express/lib/response.js:174:12)
-    at ServerResponse.json (/Users/pavitarsharma/Desktop/ajay/server/node_modules/.pnpm/express@4.18.2/node_modules/express/lib/response.js:278:15)
-    at /Users/pavitarsharma/Desktop/ajay/server/src/controllers/customer.controller.ts:121:19
-    at Generator.next (<anonymous>)
-    at fulfilled (/Users/pavitarsharma/Desktop/ajay/server/src/controllers/customer.controller.ts:5:58)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-02-24T11:27:36.355Z] [31merror[39m: uncaughtException: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/server.js:24:34
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-24T11:27:49.622Z] [31merror[39m: uncaughtException: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/server.js:24:34
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-24T11:28:11.742Z] [31merror[39m: uncaughtException: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/server.js:24:34
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-24T11:29:08.099Z] [31merror[39m: uncaughtException: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/server.js:24:34
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-24T11:29:14.660Z] [31merror[39m: uncaughtException: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/server.js:24:34
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-24T11:29:42.438Z] [31merror[39m: uncaughtException: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/server.js:24:34
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-24T11:30:30.768Z] [31merror[39m: uncaughtException: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/server.js:24:34
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-24T11:30:37.980Z] [31merror[39m: uncaughtException: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/server.js:24:34
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-24T11:31:58.877Z] [31merror[39m: uncaughtException: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/server.js:24:34
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-24T11:32:07.117Z] [31merror[39m: uncaughtException: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/server.js:24:34
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-24T11:32:29.926Z] [31merror[39m: uncaughtException: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/server.js:24:34
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-24T11:32:41.554Z] [31merror[39m: uncaughtException: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/server.js:24:34
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-24T11:33:06.997Z] [31merror[39m: uncaughtException: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/server.js:24:34
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-24T11:33:17.265Z] [31merror[39m: uncaughtException: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/server.js:24:34
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-24T11:33:25.516Z] [31merror[39m: uncaughtException: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/server.js:24:34
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-24T11:33:36.195Z] [31merror[39m: uncaughtException: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/server.js:24:34
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-24T11:34:31.760Z] [31merror[39m: uncaughtException: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/server.js:24:34
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-24T11:34:44.820Z] [31merror[39m: uncaughtException: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/server.js:24:34
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-24T11:37:13.210Z] [31merror[39m: uncaughtException: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/server.js:24:34
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-24T11:37:38.845Z] [31merror[39m: uncaughtException: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/server.js:24:34
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-24T11:38:43.309Z] [31merror[39m: uncaughtException: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/server.js:24:34
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-24T11:40:48.232Z] [31merror[39m: uncaughtException: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: __dirname is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/pavitarsharma/Desktop/ajay/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/server.js:24:34
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-24T11:44:48.697Z] [31merror[39m: unhandledRejection: logger is not defined
+ReferenceError: logger is not defined
+    at verifyEmail (file:///Users/pavitarsharma/Desktop/ajay/server/src/controllers/customer.controller.js:60:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-02-24T12:04:55.189Z] [31merror[39m: unhandledRejection: jwt malformed
+JsonWebTokenError: jwt malformed
+    at module.exports [as verify] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/jsonwebtoken/verify.js:70:17)
+    at isAuthenticated (file:///Users/pavitarsharma/Desktop/ajay/server/src/middlewares/auth.js:20:23)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:328:13)
+    at /Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+[2024-02-24T15:43:03.367Z] [31merror[39m: unhandledRejection: jwt malformed
+JsonWebTokenError: jwt malformed
+    at module.exports [as verify] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/jsonwebtoken/verify.js:70:17)
+    at isAuthenticated (file:///Users/pavitarsharma/Desktop/ajay/server/src/middlewares/auth.js:20:23)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:328:13)
+    at /Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+[2024-02-24T15:44:01.221Z] [31merror[39m: unhandledRejection: jwt malformed
+JsonWebTokenError: jwt malformed
+    at module.exports [as verify] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/jsonwebtoken/verify.js:70:17)
+    at isAuthenticated (file:///Users/pavitarsharma/Desktop/ajay/server/src/middlewares/auth.js:20:23)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:328:13)
+    at /Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+[2024-02-24T15:50:04.958Z] [31merror[39m: uncaughtException: string is not defined
+ReferenceError: string is not defined
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/models/product.model.js:28:20
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-24T16:33:02.438Z] [31merror[39m: unhandledRejection: jwt malformed
+JsonWebTokenError: jwt malformed
+    at module.exports [as verify] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/jsonwebtoken/verify.js:70:17)
+    at isAuthenticated (file:///Users/pavitarsharma/Desktop/ajay/server/src/middlewares/auth.js:20:23)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:328:13)
+    at /Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+[2024-02-24T16:35:52.513Z] [31merror[39m: unhandledRejection: jwt malformed
+JsonWebTokenError: jwt malformed
+    at module.exports [as verify] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/jsonwebtoken/verify.js:70:17)
+    at isAuthenticated (file:///Users/pavitarsharma/Desktop/ajay/server/src/middlewares/auth.js:20:23)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:328:13)
+    at /Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+[2024-02-24T16:35:59.566Z] [31merror[39m: unhandledRejection: jwt malformed
+JsonWebTokenError: jwt malformed
+    at module.exports [as verify] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/jsonwebtoken/verify.js:70:17)
+    at isAuthenticated (file:///Users/pavitarsharma/Desktop/ajay/server/src/middlewares/auth.js:20:23)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:328:13)
+    at /Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+[2024-02-24T16:36:26.029Z] [31merror[39m: unhandledRejection: jwt malformed
+JsonWebTokenError: jwt malformed
+    at module.exports [as verify] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/jsonwebtoken/verify.js:70:17)
+    at isAuthenticated (file:///Users/pavitarsharma/Desktop/ajay/server/src/middlewares/auth.js:20:23)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:328:13)
+    at /Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+[2024-02-24T16:36:55.231Z] [31merror[39m: unhandledRejection: jwt malformed
+JsonWebTokenError: jwt malformed
+    at module.exports [as verify] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/jsonwebtoken/verify.js:70:17)
+    at isAuthenticated (file:///Users/pavitarsharma/Desktop/ajay/server/src/middlewares/auth.js:20:23)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:328:13)
+    at /Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+[2024-02-24T16:41:35.868Z] [31merror[39m: unhandledRejection: jwt malformed
+JsonWebTokenError: jwt malformed
+    at module.exports [as verify] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/jsonwebtoken/verify.js:70:17)
+    at isAuthenticated (file:///Users/pavitarsharma/Desktop/ajay/server/src/middlewares/auth.js:20:23)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:328:13)
+    at /Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+[2024-02-24T16:43:07.457Z] [31merror[39m: unhandledRejection: jwt malformed
+JsonWebTokenError: jwt malformed
+    at module.exports [as verify] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/jsonwebtoken/verify.js:70:17)
+    at isAuthenticated (file:///Users/pavitarsharma/Desktop/ajay/server/src/middlewares/auth.js:20:23)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:328:13)
+    at /Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+[2024-02-24T16:43:32.704Z] [31merror[39m: unhandledRejection: jwt malformed
+JsonWebTokenError: jwt malformed
+    at module.exports [as verify] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/jsonwebtoken/verify.js:70:17)
+    at isAuthenticated (file:///Users/pavitarsharma/Desktop/ajay/server/src/middlewares/auth.js:20:23)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:328:13)
+    at /Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+[2024-02-24T17:06:14.738Z] [31merror[39m: unhandledRejection: jwt malformed
+JsonWebTokenError: jwt malformed
+    at module.exports [as verify] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/jsonwebtoken/verify.js:70:17)
+    at isAuthenticated (file:///Users/pavitarsharma/Desktop/ajay/server/src/middlewares/auth.js:20:23)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:328:13)
+    at /Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+[2024-02-24T17:06:46.073Z] [31merror[39m: unhandledRejection: jwt malformed
+JsonWebTokenError: jwt malformed
+    at module.exports [as verify] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/jsonwebtoken/verify.js:70:17)
+    at isAuthenticated (file:///Users/pavitarsharma/Desktop/ajay/server/src/middlewares/auth.js:20:23)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:328:13)
+    at /Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+[2024-02-25T01:32:48.903Z] [31merror[39m: unhandledRejection: jwt malformed
+JsonWebTokenError: jwt malformed
+    at module.exports [as verify] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/jsonwebtoken/verify.js:70:17)
+    at isAuthenticated (file:///Users/pavitarsharma/Desktop/ajay/server/src/middlewares/auth.js:20:23)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:328:13)
+    at /Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+[2024-02-25T01:33:38.865Z] [31merror[39m: unhandledRejection: jwt malformed
+JsonWebTokenError: jwt malformed
+    at module.exports [as verify] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/jsonwebtoken/verify.js:70:17)
+    at isAuthenticated (file:///Users/pavitarsharma/Desktop/ajay/server/src/middlewares/auth.js:20:23)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:328:13)
+    at /Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+[2024-02-25T01:35:00.409Z] [31merror[39m: unhandledRejection: jwt malformed
+JsonWebTokenError: jwt malformed
+    at module.exports [as verify] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/jsonwebtoken/verify.js:70:17)
+    at isAuthenticated (file:///Users/pavitarsharma/Desktop/ajay/server/src/middlewares/auth.js:20:23)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:328:13)
+    at /Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+[2024-02-25T01:35:23.794Z] [31merror[39m: unhandledRejection: jwt malformed
+JsonWebTokenError: jwt malformed
+    at module.exports [as verify] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/jsonwebtoken/verify.js:70:17)
+    at isAuthenticated (file:///Users/pavitarsharma/Desktop/ajay/server/src/middlewares/auth.js:20:23)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:328:13)
+    at /Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+[2024-02-25T01:39:08.047Z] [31merror[39m: unhandledRejection: jwt malformed
+JsonWebTokenError: jwt malformed
+    at module.exports [as verify] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/jsonwebtoken/verify.js:70:17)
+    at isAuthenticated (file:///Users/pavitarsharma/Desktop/ajay/server/src/middlewares/auth.js:20:23)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:328:13)
+    at /Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+[2024-02-25T01:41:44.818Z] [31merror[39m: unhandledRejection: jwt malformed
+JsonWebTokenError: jwt malformed
+    at module.exports [as verify] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/jsonwebtoken/verify.js:70:17)
+    at isAuthenticated (file:///Users/pavitarsharma/Desktop/ajay/server/src/middlewares/auth.js:20:23)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:328:13)
+    at /Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+[2024-02-25T01:49:10.150Z] [31merror[39m: unhandledRejection: jwt malformed
+JsonWebTokenError: jwt malformed
+    at module.exports [as verify] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/jsonwebtoken/verify.js:70:17)
+    at isAuthenticated (file:///Users/pavitarsharma/Desktop/ajay/server/src/middlewares/auth.js:20:23)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:328:13)
+    at /Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+[2024-02-25T01:52:37.687Z] [31merror[39m: unhandledRejection: jwt malformed
+JsonWebTokenError: jwt malformed
+    at module.exports [as verify] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/jsonwebtoken/verify.js:70:17)
+    at isAuthenticated (file:///Users/pavitarsharma/Desktop/ajay/server/src/middlewares/auth.js:20:23)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:328:13)
+    at /Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+[2024-02-25T01:56:57.194Z] [31merror[39m: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1893:16)
+    at listenInCluster (node:net:1941:12)
+    at Server.listen (node:net:2029:7)
+    at Function.listen (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/application.js:635:24)
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/index.js:11:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-25T01:57:03.722Z] [31merror[39m: unhandledRejection: jwt malformed
+JsonWebTokenError: jwt malformed
+    at module.exports [as verify] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/jsonwebtoken/verify.js:70:17)
+    at isAuthenticated (file:///Users/pavitarsharma/Desktop/ajay/server/src/middlewares/auth.js:20:23)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:328:13)
+    at /Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/router/layer.js:95:5)
+[2024-02-25T01:57:52.925Z] [31merror[39m: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1893:16)
+    at listenInCluster (node:net:1941:12)
+    at Server.listen (node:net:2029:7)
+    at Function.listen (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/application.js:635:24)
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/index.js:11:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-25T01:57:56.390Z] [31merror[39m: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1893:16)
+    at listenInCluster (node:net:1941:12)
+    at Server.listen (node:net:2029:7)
+    at Function.listen (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/application.js:635:24)
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/index.js:11:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-25T01:57:56.802Z] [31merror[39m: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1893:16)
+    at listenInCluster (node:net:1941:12)
+    at Server.listen (node:net:2029:7)
+    at Function.listen (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/application.js:635:24)
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/index.js:11:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-25T01:58:00.149Z] [31merror[39m: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1893:16)
+    at listenInCluster (node:net:1941:12)
+    at Server.listen (node:net:2029:7)
+    at Function.listen (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/application.js:635:24)
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/index.js:11:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-25T04:38:06.365Z] [31merror[39m: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1893:16)
+    at listenInCluster (node:net:1941:12)
+    at Server.listen (node:net:2029:7)
+    at Function.listen (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/application.js:635:24)
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/index.js:11:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-25T07:59:02.626Z] [31merror[39m: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1893:16)
+    at listenInCluster (node:net:1941:12)
+    at Server.listen (node:net:2029:7)
+    at Function.listen (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/application.js:635:24)
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/index.js:11:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-25T08:01:32.265Z] [31merror[39m: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1893:16)
+    at listenInCluster (node:net:1941:12)
+    at Server.listen (node:net:2029:7)
+    at Function.listen (/Users/pavitarsharma/Desktop/ajay/server/node_modules/express/lib/application.js:635:24)
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/index.js:11:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-25T08:02:07.929Z] [31merror[39m: uncaughtException: MongooseSchema is not defined
+ReferenceError: MongooseSchema is not defined
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/models/customer.model.js:28:17
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-25T08:02:07.929Z] [31merror[39m: uncaughtException: MongooseSchema is not defined
+ReferenceError: MongooseSchema is not defined
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/models/customer.model.js:28:17
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-25T08:03:16.595Z] [31merror[39m: uncaughtException: MongooseSchema is not defined
+ReferenceError: MongooseSchema is not defined
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/models/customer.model.js:28:17
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-25T08:03:16.595Z] [31merror[39m: uncaughtException: MongooseSchema is not defined
+ReferenceError: MongooseSchema is not defined
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/models/customer.model.js:28:17
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-25T08:11:03.512Z] [31merror[39m: uncaughtException: MongooseSchema is not defined
+ReferenceError: MongooseSchema is not defined
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/models/customer.model.js:28:17
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-25T08:11:03.512Z] [31merror[39m: uncaughtException: MongooseSchema is not defined
+ReferenceError: MongooseSchema is not defined
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/models/customer.model.js:28:17
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-25T08:14:48.593Z] [31merror[39m: uncaughtException: MongooseSchema is not defined
+ReferenceError: MongooseSchema is not defined
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/models/customer.model.js:28:17
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-25T08:14:53.433Z] [31merror[39m: uncaughtException: MongooseSchema is not defined
+ReferenceError: MongooseSchema is not defined
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/models/customer.model.js:28:17
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-25T08:15:01.565Z] [31merror[39m: uncaughtException: MongooseSchema is not defined
+ReferenceError: MongooseSchema is not defined
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/models/customer.model.js:28:17
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-25T08:15:08.259Z] [31merror[39m: uncaughtException: MongooseSchema is not defined
+ReferenceError: MongooseSchema is not defined
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/models/customer.model.js:28:17
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-25T08:16:45.234Z] [31merror[39m: uncaughtException: MongooseSchema is not defined
+ReferenceError: MongooseSchema is not defined
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/models/customer.model.js:28:17
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-25T08:18:17.691Z] [31merror[39m: uncaughtException: MongooseSchema is not defined
+ReferenceError: MongooseSchema is not defined
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/models/customer.model.js:28:17
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-25T08:32:13.970Z] [31merror[39m: uncaughtException: MongooseSchema is not defined
+ReferenceError: MongooseSchema is not defined
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/models/customer.model.js:28:17
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-25T08:34:18.441Z] [31merror[39m: uncaughtException: MongooseSchema is not defined
+ReferenceError: MongooseSchema is not defined
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/models/customer.model.js:28:17
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+[2024-02-25T08:38:27.113Z] [31merror[39m: uncaughtException: MongooseSchema is not defined
+ReferenceError: MongooseSchema is not defined
+    at file:///Users/pavitarsharma/Desktop/ajay/server/src/models/customer.model.js:28:17
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
