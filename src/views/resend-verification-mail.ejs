@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Firstlink Exim</title>
+    <title>Firstlink Exim - Resend Verification Email</title>
     <style>
       * {
         margin: 0;
@@ -76,36 +76,47 @@
     <div class="container">
       <div class="card">
         <div class="title">
-          <h2>Welcome to FirstLink Exim</h2>
+          <h2>Resend Verification Email</h2>
         </div>
         <p style="margin-top: 16px">
           Hello <span class="name"><%= name %></span>,
         </p>
 
-        <p style="margin-top: 16px; margin-bottom: 16px;">
-          Thank you for registering and being a member with us.
+        <p style="margin-top: 16px; margin-bottom: 16px">
+          We noticed that you haven't verified your email yet. Please complete
+          the verification process to activate your account.
         </p>
 
-        <p style="margin-block: 16px; line-height: 26px;">
-          You are just a step away from registering yourself. Simply click the
-          button below to verify your email address and get started. The link
-          expires in
-          <span style="color: black; font-weight: 600;">10 minutes</span>
+        <p style="margin-top: 16px; margin-bottom: 16px; line-height: 26px">
+          You're just a step away from accessing all the features of our
+          platform. Click the button below to verify your email address. This
+          link will expire in
+          <span style="color: black; font-weight: 600">10 minutes</span>.
         </p>
-
-       
 
         <div
-          style="display: flex; align-items: center; justify-content: center; margin-bottom: 16px; margin-top: 16px; width: 100%;"
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            margin-top: 16px;
+            width: 100%;
+          "
         >
-          <a href="<%= href %>" target="_blank" class="btn" style="color: white;"> Verify Email </a>
+          <a
+            href="<%= href %>"
+            target="_blank"
+            class="btn"
+            style="color: white"
+          >
+            Verify Email
+          </a>
         </div>
 
-       
-
-        <div style="margin-block: 16px">
+        <div style="margin-top: 16px; margin-bottom: 16px;">
           <p>Regards</p>
-          <p style="margin-top: 4px; font-weight: 500">
+          <p style="margin-top: 4px; font-weight: 500;">
             FirstLink Export & Import Team
           </p>
         </div>

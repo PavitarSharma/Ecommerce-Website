@@ -61,11 +61,13 @@ const generateUploadURLs = async (files) => {
 };
 
 const deleteFileFromS3 = async (fileUrl) => {
+
   const fileName = fileUrl.split("/").pop();
   const params = {
     Bucket: AWS_BUCKET_NAME,
     Key: fileName,
   };
+
 
   await s3client.send(new DeleteObjectCommand(params));
 };

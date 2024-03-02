@@ -1,12 +1,29 @@
 import mongoose, { Schema } from "mongoose";
 import bcrypt from "bcrypt";
-
+import crypto from "crypto"
+import { productSchema } from "./product.model.js";
 const { model } = mongoose;
 
 const Role = {
   Customer: "customer",
   Admin: "admin",
 };
+
+const addressSchema = new Schema(
+  {
+    address: String,
+    city: String,
+    state: String,
+    country: String,
+    zipcode: String,
+    lat: String,
+    lng: String,
+    isActive: { type: Boolean, default: true },
+  },
+  {
+    timestamps: true,
+  }
+);
 
 const customerSchema = new Schema(
   {
@@ -16,7 +33,6 @@ const customerSchema = new Schema(
     phone: String,
     bio: String,
     username: String,
-    location: Array,
     profileImg: {
       id: String,
       url: String,
@@ -24,22 +40,19 @@ const customerSchema = new Schema(
     verified: { type: Boolean, default: false },
     carts: [
       {
-        product: {
-          type: MongooseSchema.Types.ObjectId,
-          ref: "Product",
-        },
+        product: Object,
         quantity: Number,
       },
     ],
     wishlists: [
       {
-        type: MongooseSchema.Types.ObjectId,
-        ref: "Product",
+        type: Object,
+       
       },
     ],
     orders: [
       {
-        type: MongooseSchema.Types.ObjectId,
+        type: Schema.Types.ObjectId,
         ref: "Order",
       },
     ],
@@ -50,12 +63,17 @@ const customerSchema = new Schema(
     device: String,
     loginDevices: { type: [{ device: String, count: Number }], default: [] },
     acceptTerms: { type: Boolean, default: false },
+    addresses: [addressSchema],
+    resetPasswordToken: String,
+    resetPasswordTime: Date,
   },
   {
     toJSON: {
       transform(doc, ret) {
         delete ret.password;
         delete ret.__v;
+        delete ret.resetPasswordToken;
+        delete ret.resetPasswordTime;
       },
     },
     timestamps: true,
@@ -75,6 +93,21 @@ customerSchema.pre("save", async function (next) {
 
 customerSchema.methods.comparePassword = async function (enteredPassword) {
   return await bcrypt.compare(enteredPassword, this.password);
+};
+
+customerSchema.methods.getResetToken = function () {
+  // Generating token
+  const resetToken = crypto.randomBytes(32).toString("hex");
+
+  //    hashing and adding resetPasswordToken to userSchema
+  this.resetPasswordToken = crypto
+    .createHash("sha256")
+    .update(resetToken)
+    .digest("hex");
+
+  this.resetPasswordTime = Date.now() + 15 * 60 * 1000;
+
+  return resetToken;
 };
 
 export const Customer = model("Customer", customerSchema);

@@ -21,3 +21,6 @@ export const SMTP_PORT = process.env.SMTP_PORT;
 export const SMTP_MAIL = process.env.SMTP_MAIL;
 export const SMTP_PASSWORD = process.env.SMTP_PASSWORD;
 export const SMPT_SERVICE = process.env.SMPT_SERVICE;
+
+export const STRIPE_PUBLIC_KEY = process.env.STRIPE_PUBLIC_KEY
+export const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET_KEY

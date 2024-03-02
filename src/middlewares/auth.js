@@ -5,15 +5,11 @@ import ErrorHandler from "../utils/ErrorHandler.js";
 export const isAuthenticated = async (req, res, next) => {
   const authHeader = req.headers.authorization || req.headers.Authorization;
 
-  const authHeaderString = Array.isArray(authHeader)
-    ? authHeader[0]
-    : authHeader;
-
-  if (!authHeaderString?.startsWith("Bearer ")) {
+  if (!authHeader?.startsWith("Bearer ")) {
     return next(new ErrorHandler("Access Denied. No token provided.", 401));
   }
 
-  const token = authHeaderString.split(" ")[1];
+  const token = authHeader && authHeader.split(" ")[1];
 
   if (!token) return next(new ErrorHandler("Access Denied. No token provided.", 401));
 
