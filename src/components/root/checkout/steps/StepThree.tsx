@@ -1,6 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable react-refresh/only-export-components */
-import React, { forwardRef, useImperativeHandle, useState } from "react";
+import React, {
+  forwardRef,
+  useCallback,
+  useImperativeHandle,
+  useState,
+} from "react";
 import {
   CardExpiryElement,
   CardNumberElement,
@@ -18,6 +23,8 @@ import toast from "react-hot-toast";
 import { createOrder } from "../../../../services";
 import { AxiosError } from "axios";
 import { handleApiError } from "../../../../utils/handleApiError";
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
+import { IoMdClose } from "react-icons/io";
 
 export interface StepThreeRef {}
 
@@ -34,16 +41,40 @@ const StepThree: React.ForwardRefRenderFunction<
   const elements = useElements();
   const [cardHolder, setCardHolder] = useState("");
   const navigate = useNavigate();
+  const [openPaypal, setOpenPaypal] = useState(false);
 
   const { carts } = useAppSelector(CartState);
   const { total: totalAmount, currencyCode } = calculateCartTotalPrice(carts);
   const onChange = (_e: React.ChangeEvent<HTMLInputElement>, val: number) => {
     setActive(active === val ? 0 : val);
   };
+
   const onClick = (val: number) => setActive(active === val ? 0 : val);
   const isValidFormat = (value: string): boolean => {
     const regex = /^\d{2}\/\d{2}$/;
     return regex.test(value);
+  };
+
+  const createOrder = (_data: any, actions: any) => {
+    return actions.order
+      .create({
+        purchase_units: [
+          {
+            description: "Sunflower",
+            amount: {
+              currency_code: "USD",
+              value: 10,
+            },
+          },
+        ],
+        // not needed if a shipping address is actually needed
+        application_context: {
+          shipping_preference: "NO_SHIPPING",
+        },
+      })
+      .then((orderID: string) => {
+        return orderID;
+      });
   };
 
   const paymentHandler = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -161,6 +192,18 @@ const StepThree: React.ForwardRefRenderFunction<
     // router.push(`/order/success?orderId=${data._id}`)
   };
 
+  const onApprove = async (_data: any, actions: any) => {
+    return actions.order.capture().then(function (details: any) {
+      const { payer } = details;
+
+      const paymentInfo = payer;
+
+      if (paymentInfo !== undefined) {
+        paypalPaymentHandler(paymentInfo);
+      }
+    });
+  };
+
   const cashOnDeliveryHandler = async () => {
     onClick(3);
     const orderData = {
@@ -187,6 +230,8 @@ const StepThree: React.ForwardRefRenderFunction<
     // const data = await createOrderMutation(orderData)
     // router.push(`/order/success?orderId=${data._id}`)
   };
+
+  const handleOpenPaypal = useCallback(() => setOpenPaypal(true), []);
 
   const paymentMode =
     active === 1
@@ -412,8 +457,36 @@ const StepThree: React.ForwardRefRenderFunction<
             className={`py-4 bg-white transition duration-300`}
           >
             <div className="max-w-[200px] w-full">
-              <Button label="Pay Now" onClick={paypalPaymentHandler} />
+              <Button label="Pay Now" onClick={handleOpenPaypal} />
             </div>
+
+            {openPaypal && (
+              <div
+                className={`fixed inset-0 bg-black/30 z-[1000] flex items-center p-4 justify-center h-screen transition duration-300`}
+              >
+                <div className="max-w-xl w-full bg-white p-4 rounded-md shadow relative overflow-y-auto">
+                  <button
+                    className="absolute top-2 right-4"
+                    onClick={() => setOpenPaypal(false)}
+                  >
+                    <IoMdClose size={20} />
+                  </button>
+                  <div className="mt-6">
+                    <PayPalScriptProvider
+                      options={{
+                        clientId: import.meta.env.VITE_PAYPAL_CLIENT_ID,
+                      }}
+                    >
+                      <PayPalButtons
+                        style={{ layout: "vertical" }}
+                        onApprove={onApprove}
+                        createOrder={createOrder}
+                      />
+                    </PayPalScriptProvider>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         )}
       </div>
