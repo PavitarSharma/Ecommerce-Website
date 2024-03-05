@@ -28,11 +28,123 @@ class ProductService {
       query.title = { $regex: new RegExp(q, "i") };
     }
 
+    let sortCriteria = {};
+    if (sortBy === "Date added, newest to oldest") {
+      sortCriteria.createdAt = -1;
+    } else if (sortBy === "Date added, oldest to newest") {
+      sortCriteria.createdAt = 1;
+    } else if (sortBy === "Name, A to Z") {
+      sortCriteria.title = 1;
+    } else if (sortBy === "Name, Z to A") {
+      sortCriteria.title = -1;
+    } else if (sortBy === "Price, low to high") {
+      sortCriteria.price = 1;
+    } else if (sortBy === "Price, high to low") {
+      sortCriteria.price = -1;
+    }
 
-    return await Product.find(query)
-      .skip(skip)
-      .limit(limit)
-      .sort({ createdAt: -1 });
+    if (size) {
+      query.sizes = size;
+    }
+
+    if (color) {
+      query["images.color"] = color;
+    }
+
+    if (type) {
+      query.name = type;
+    }
+
+    if (price) {
+      const [minPrice, maxPrice] = price
+        .split("-")
+        .map((p) => parseFloat(p.trim()));
+      query.price = {
+        $gte: isNaN(minPrice) ? Number.MIN_VALUE : minPrice,
+        $lte: isNaN(maxPrice) ? Number.MAX_VALUE : maxPrice,
+      };
+    }
+
+    const [products, total] = await Promise.all([
+      Product.find(query).skip(skip).limit(limit).sort(sortCriteria).exec(),
+      Product.countDocuments(query).exec(),
+    ]);
+    const totalPages = Math.ceil(total / limit);
+
+    return { products, total, totalPages };
+  }
+
+  async getNewArrivals(params) {
+    // const startDate = new Date();
+    // const endDate = new Date();
+    // endDate.setDate(endDate.getDate() + 7);
+
+    const endDate = new Date();
+    const startDate = new Date(endDate);
+    startDate.setDate(startDate.getDate() - 7);
+    
+    const { q, category, sortBy, size, color, type, price } = params;
+    const page = Number(params.page) || 1;
+    const limit = Number(params.limit) || 10;
+    const skip = (page - 1) * limit;
+    let query = {};
+
+    if (category) {
+      query.category = category;
+    }
+    if (q) {
+      query.title = { $regex: new RegExp(q, "i") };
+    }
+
+    let sortCriteria = {};
+    if (sortBy === "Date added, newest to oldest") {
+      sortCriteria.createdAt = -1;
+    } else if (sortBy === "Date added, oldest to newest") {
+      sortCriteria.createdAt = 1;
+    } else if (sortBy === "Name, A to Z") {
+      sortCriteria.title = 1;
+    } else if (sortBy === "Name, Z to A") {
+      sortCriteria.title = -1;
+    } else if (sortBy === "Price, low to high") {
+      sortCriteria.price = 1;
+    } else if (sortBy === "Price, high to low") {
+      sortCriteria.price = -1;
+    }
+
+    if (size) {
+      query.sizes = size;
+    }
+
+    if (color) {
+      query["images.color"] = color;
+    }
+
+    if (type) {
+      query.name = type;
+    }
+
+    if (price) {
+      const [minPrice, maxPrice] = price
+        .split("-")
+        .map((p) => parseFloat(p.trim()));
+      query.price = {
+        $gte: isNaN(minPrice) ? Number.MIN_VALUE : minPrice,
+        $lte: isNaN(maxPrice) ? Number.MAX_VALUE : maxPrice,
+      };
+    }
+
+    console.log("Start Date: ", startDate)
+    console.log("End Date: ", endDate);;
+
+    query.createdAt = { $gte: startDate, $lte: endDate };
+
+    const [products, total] = await Promise.all([
+      Product.find(query).skip(skip).limit(limit).sort(sortCriteria).exec(),
+      Product.countDocuments(query).exec(),
+    ]);
+
+    const totalPages = Math.ceil(total / limit);
+    return { products, total, totalPages };
   }
 
   async addToWishlist(body, customerId) {
@@ -45,27 +157,26 @@ class ProductService {
     if (!product) {
       throw new ErrorHandler("Product not found", 404);
     }
-    const wishlistProductIndex = customer.wishlists.findIndex(item => item && item._id && item._id.toString() === productId);
+    const wishlistProductIndex = customer.wishlists.findIndex(
+      (item) => item && item._id && item._id.toString() === productId
+    );
+
+    product.like = like;
+    await product.save();
     if (like) {
       // If like is true, add the product to customer's wishlist
       if (wishlistProductIndex === -1) {
         customer.wishlists.push(product);
         await customer.save();
-        
       }
     } else {
       // If like is false, remove the product from customer's wishlist
       if (wishlistProductIndex !== -1) {
         customer.wishlists.splice(wishlistProductIndex, 1);
         await customer.save();
-       
       }
     }
-    console.log(like);
 
-    // Update like status in the product model
-    product.like = like;
-    await product.save();
     return product;
   }
 
@@ -80,7 +191,6 @@ class ProductService {
     if (!product) {
       throw new ErrorHandler("Product not found", 404);
     }
- 
 
     const existingCartItem = customer.carts.find(
       (item) => item.product.toString() === productId
@@ -199,19 +309,25 @@ class ProductService {
       throw new ErrorHandler("Product not found", 404);
     }
 
-    
-
-    const newReview = { customer: {
-      _id: customer._id,
-      name: customer.name,
-      email: customer.email,
-      profileIm: customer.profileIm
-    }, rating, message };
+    const newReview = {
+      customer: {
+        _id: customer._id,
+        name: customer.name,
+        email: customer.email,
+        profileImg: customer.profileImg,
+      },
+      rating,
+      message,
+    };
 
     product.reviews.push(newReview);
     await product.save();
+    const newIndex = product.reviews.length - 1;
 
-    return newReview;
+    // Access the newly added review object
+    const createdReview = product.reviews[newIndex];
+
+    return createdReview;
   }
 
   async getReviews(productId) {
@@ -220,7 +336,9 @@ class ProductService {
       throw new ErrorHandler("Product not found", 404);
     }
 
-    const sortedReviews = product.reviews.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+    const sortedReviews = product.reviews.sort(
+      (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+    );
 
     return sortedReviews;
   }
@@ -235,10 +353,9 @@ class ProductService {
       (item) => item._id.toString() === reviewId
     );
 
-    if (reviewIndex!== -1) {
+    if (reviewIndex !== -1) {
       product.reviews[reviewIndex] = body;
     }
-
     await product.save();
 
     return product.reviews[reviewIndex];
@@ -254,7 +371,7 @@ class ProductService {
       (item) => item._id.toString() === reviewId
     );
 
-    if (reviewIndex!== -1) {
+    if (reviewIndex !== -1) {
       product.reviews.splice(reviewIndex, 1);
     }
 

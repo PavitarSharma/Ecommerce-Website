@@ -19,6 +19,7 @@ router.get("/cart", customerController.getCart);
 router.get("/profile", customerController.customerProfile);
 router.get("/profile/address", customerController.getAllAddresses);
 router.get("/profile/address/:addressId", customerController.getAddress);
+router.get("/orders", customerController.getOrders)
 
 router.patch("/profile", customerController.updateCustomerProfile);
 router.patch(

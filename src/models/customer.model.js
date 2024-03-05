@@ -56,12 +56,11 @@ const customerSchema = new Schema(
         ref: "Order",
       },
     ],
-    roles: {
-      type: [{ type: String, enum: Object.values(Role) }],
-      default: [Role.Customer],
+    role: {
+      type: String,
+      default: "User",
     },
     device: String,
-    loginDevices: { type: [{ device: String, count: Number }], default: [] },
     acceptTerms: { type: Boolean, default: false },
     addresses: [addressSchema],
     resetPasswordToken: String,

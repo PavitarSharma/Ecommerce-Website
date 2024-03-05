@@ -7,5 +7,6 @@ router.use(isAuthenticated)
 router.post("/create-order", orderController.createOrder)
 router.get("/", orderController.getAllOrders)
 router.get("/:id", orderController.getOrder)
+router.post("/cancel-order/:id", orderController.cancelOrder)
 
 export default router

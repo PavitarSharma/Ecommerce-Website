@@ -26,8 +26,14 @@ class ProductController {
 
   async getProduct(req, res, next) {
     const productId = req.params.id;
-    const product = await productService.getProduct(productId);
+    const product = await productService.findProductById(productId);
+    await product.calculateRating(); 
     res.status(200).json(product);
+  }
+
+  async getNewArrivals(req, res, next) {
+    const products = await productService.getNewArrivals(req.query);
+    res.status(200).json(products);
   }
 
   // --------------------- Reviews --------------------

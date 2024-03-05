@@ -175,11 +175,12 @@ class CustomerController {
 
     res.status(200).json({
       token: resetToken,
+      message: `An mail has been sent to ${email} for reset password`,
     });
   }
 
   async resetPassword(req, res, next) {
-    const { token, email, newPassword, confirmPassword } = req.body;
+    const { token, newPassword, confirmPassword } = req.body;
 
     if (!token)
       return next(new ErrorHandler("Reset password token is required", 400));
@@ -463,6 +464,19 @@ class CustomerController {
     const carts = await customer.populate("carts.product");
     logger.info("Carts", carts);
     res.status(200).json(carts.carts);
+  }
+
+  async getOrders(req, res, next) {
+    const customerId = req.user;
+
+    if (!customerId) {
+      return res.status(200).json([]);
+    }
+
+    const customer = await customerService.findById(customerId);
+    const orders = await customer.populate("orders");
+    res.status(200).json(orders.orders)
+
   }
 
   async checkout(req, res, next) {}

@@ -8,8 +8,9 @@ const router = express.Router();
 
 
 router.get("/", productController.allProducts);
-console.log("Product routes");
+router.get("/new-arrivals", productController.getNewArrivals)
 router.get("/:id", productController.getProduct);
+
 router.post(
   "/upload-media",
   upload.array("file"),

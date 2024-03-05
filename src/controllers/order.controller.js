@@ -28,6 +28,12 @@ class OrderController {
         const order = await orderService.deleteOrder(orderId)
         res.status(200).json(order)
     }
+
+    async cancelOrder(req, res, next) {
+        const orderId = req.params.id
+        const order = await orderService.cancelOrder(orderId)
+        res.status(200).json(order)
+    }
 }
 
 export const orderController = new OrderController()

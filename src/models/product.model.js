@@ -2,7 +2,7 @@ import mongoose, { Schema } from "mongoose";
 
 const { model, Schema: MongooseSchema } = mongoose;
 
-const reviewSchema = new Schema(
+export const reviewSchema = new Schema(
   {
     customer: Object,
     rating: { type: Number, required: true },
@@ -52,6 +52,12 @@ export const productSchema = new MongooseSchema(
   },
   {
     timestamps: true,
+    toJSON: {
+      transform(doc, ret) {
+        delete ret.reviews;
+        delete ret.__v;
+      },
+    },
   }
 );
 
@@ -65,12 +71,15 @@ productSchema.methods.calculateRating = function () {
   );
   const averageRating = totalRating / totalReviews;
 
-  this.rating.rate = averageRating;
-  this.rating.count = totalReviews;
+  this.rating.rate = parseFloat(averageRating.toFixed(2));
+  this.rating.count = totalReviews.toFixed(2);
 };
 
+
 productSchema.post("save", function () {
-  this.calculateRating();
+this.calculateRating();
 });
+
+
 
 export const Product = model("Product", productSchema);

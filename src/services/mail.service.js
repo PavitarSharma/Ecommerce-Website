@@ -16,7 +16,7 @@ class MailService {
     try {
       const emailData = {
         email: data.email,
-        subject: `Firstlink Exim Account Verification - ${data.otp}`,
+        subject: `Firstlink Exim Account Verification`,
         template: "activation-account-mail",
         html,
       };
